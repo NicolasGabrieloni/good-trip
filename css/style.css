@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body .video {
+  position: fixed;
+  min-height: 100%;
+  min-width: 100%;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%); }
+
+body header nav {
+  box-shadow: 2px 1px 10px 4px black;
+  background-color: rgba(255, 255, 255, 0.486);
+  justify-content: flex-end; }
+  body header nav div .navbar-collapse {
+    justify-content: flex-end; }
+
+body a .indexbtn {
+  width: 700px;
+  height: 100px;
+  border: 1px solid black;
+  animation-name: animacionbtn;
+  animation-duration: 5s;
+  animation-iteration-count: infinite; }
+
+body footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%; }
+  body footer .redesSociales {
+    text-align: center;
+    margin: 20px; }
+    body footer .redesSociales a {
+      margin: 35px;
+      font-size: 40px;
+      color: white; }
+      body footer .redesSociales a:hover {
+        border-bottom: 2px solid black; }
+
+@keyframes animacionbtn {
+  0% {
+    width: 700px;
+    height: 100px; }
+  25% {
+    width: 550px;
+    height: 150px; }
+  50% {
+    width: 400px;
+    height: 200px; }
+  75% {
+    width: 550px;
+    height: 150px; }
+  100% {
+    width: 700px;
+    height: 100px; } }
+
+/* media queries */
+@media (max-width: 700px) {
+  .indexbtn {
+    width: 380px; }
+  @keyframes animacionbtn {
+    0% {
+      width: 360px;
+      height: 100px; }
+    25% {
+      width: 350px;
+      height: 125px; }
+    50% {
+      width: 300px;
+      height: 150px; }
+    75% {
+      width: 350px;
+      height: 125px; }
+    100% {
+      width: 360px;
+      height: 100px; } } }
+
+body main div .col-12:hover {
+  background-color: rgba(255, 255, 255, 0.486);
+  transition: 1s;
+  border-radius: 20px;
+  box-shadow: 1px 4px 10px 4px black; }
+
+body main div div div .card {
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25rem; }
+  body main div div div .card:hover {
+    transform: scale(1.02);
+    box-shadow: 2px 1px 10px 4px black; }
+
+@media (max-width: 500px) {
+  body main div div div .card {
+    width: 20rem; } }
+
+body main div .carousel-inner {
+  box-shadow: 2px 1px 10px 4px black;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+
+body main .infoViajes {
+  color: white;
+  text-align: center;
+  padding-top: 10px; }
+
+@media (max-width: 990px) {
+  main {
+    margin-top: 100px; } }
