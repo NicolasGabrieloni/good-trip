@@ -2,8 +2,9 @@ body {
     main {
         div {
             .col-12 {
+                color: whitesmoke;
                 &:hover {
-                    background-color: rgba(255, 255, 255, 0.486);
+                    @include btn-color(rgba(255, 255, 255, 0.384), black);
                     transition: 1s;
                     border-radius: 20px;
                     box-shadow: 1px 4px 10px 4px black;

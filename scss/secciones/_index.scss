@@ -1,49 +1,52 @@
-body{
-    .video{
-        position: fixed;
-        min-height: 100%;
-        min-width: 100%;
-        z-index: -1;
-        top: 50%;
-        left: 50%;
-        transform:  translateX(-50%) translateY(-50%);
+body {
+    .video {
+        @extend %estiloVideo;
     }
-    header{
+
+    header {
         nav {
-            box-shadow: 2px 1px 10px 4px black;
-            background-color: $backgroundnav;
-            justify-content: flex-end;
-            div{
-                .navbar-collapse{
+            @extend %estiloNav;
+
+            div {
+                .navbar-collapse {
                     justify-content: flex-end;
                 }
             }
-         }
+        }
     }
 
     a {
-        .indexbtn{
+        .indexbtn {
             width: 700px;
             height: 100px;
             border: 1px solid black;
             animation-name: animacionbtn;
             animation-duration: 5s;
             animation-iteration-count: infinite;
+            background-color: rgba(255, 255, 255, 0.205);
+            &:hover{
+                @include btn-color(rgba(0, 0, 0, 0.315), white)
+            }
         }
     }
-    footer{
+
+    footer {
         position: fixed;
         bottom: 0;
         width: 100%;
-        .redesSociales{
+
+        .redesSociales {
             text-align: center;
             margin: 20px;
-            a{
+
+            a {
                 margin: 35px;
                 font-size: 40px;
                 color: $colorfooter;
-                &:hover{
+
+                &:hover {
                     border-bottom: 2px solid black;
+                    @include btn-color(none, black);
                 }
             }
         }
@@ -51,24 +54,28 @@ body{
 }
 
 
-@keyframes animacionbtn{
-    0%{
+@keyframes animacionbtn {
+    0% {
         width: 700px;
         height: 100px;
     }
-    25%{
+
+    25% {
         width: 550px;
         height: 150px;
     }
-    50%{
+
+    50% {
         width: 400px;
         height: 200px;
     }
-    75%{
+
+    75% {
         width: 550px;
         height: 150px;
     }
-    100%{
+
+    100% {
         width: 700px;
         height: 100px;
     }
@@ -77,31 +84,34 @@ body{
 
 /* media queries */
 @media (max-width: 700px) {
-    .indexbtn{
+    .indexbtn {
         width: 380px;
     }
-    @keyframes animacionbtn{
-        0%{
+
+    @keyframes animacionbtn {
+        0% {
             width: 360px;
             height: 100px;
         }
-        25%{
+
+        25% {
             width: 350px;
             height: 125px;
         }
-        50%{
+
+        50% {
             width: 300px;
             height: 150px;
         }
-        75%{
+
+        75% {
             width: 350px;
             height: 125px;
         }
-        100%{
+
+        100% {
             width: 360px;
             height: 100px;
         }
     }
 }
-
-
