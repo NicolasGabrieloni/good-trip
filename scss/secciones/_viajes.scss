@@ -4,10 +4,12 @@ body {
             div {
                 div {
                     .card {
+                        color: black;
                         flex-direction: column;
                         margin-left: auto;
                         margin-right: auto;
                         width: 25rem;
+
 
                         &:hover {
                             transform: scale(1.02);
