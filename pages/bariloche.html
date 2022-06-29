@@ -11,6 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../logo.jpg">
     <script src="https://kit.fontawesome.com/56807291a0.js" crossorigin="anonymous"></script>
 </head>
 
@@ -18,14 +19,14 @@
 
     <div class="video">
         <video autoplay muted loop>
-            <source src="../multimedia/videofondo.mp4">
+            <source src="https://res.cloudinary.com/goodtrip07/video/upload/v1656507720/videofondo_b66bdu.mp4">
         </video>
     </div>
 
     <header>
         <nav class="navbar navbar-expand-lg fw-bold">
             <div class="container-fluid">
-                <a class="navbar-brand fs-2" href="../index.html">GoodTrip</a>
+                <a class="navbar-brand fs-2" href="../index.html"><img src="../logo.jpg" alt=""></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -60,56 +61,58 @@
     </header>
 
 
-    <main class="position-absolute top-50 start-50 translate-middle">
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
+    <main>
+        <div class="position-absolute top-50 start-50 translate-middle">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://images.pexels.com/photos/8289301/pexels-photo-8289301.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Bariloche - Argentina</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.pexels.com/photos/4596205/pexels-photo-4596205.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Bariloche - Argentina</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.pexels.com/photos/3193767/pexels-photo-3193767.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Bariloche - Argentina</h5>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="https://images.pexels.com/photos/8289301/pexels-photo-8289301.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Bariloche - Argentina</h5>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="https://images.pexels.com/photos/4596205/pexels-photo-4596205.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Bariloche - Argentina</h5>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="https://images.pexels.com/photos/3193767/pexels-photo-3193767.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Bariloche - Argentina</h5>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
 
-        <Section class="infoViajes fw-bold">
-            <h6 class="fw-bold">informacion:</h6>
-            <p>San Carlos de Bariloche (comúnmente llamada Bariloche) es una ciudad en la región de la Patagonia
-                argentina. Limita con Nahuel Huapi, un gran lago glacial rodeado de montañas de los Andes.</p>
-        </Section>
+            <Section class="infoViajes fw-bold">
+                <h6 class="fw-bold">informacion:</h6>
+                <p>San Carlos de Bariloche (comúnmente llamada Bariloche) es una ciudad en la región de la Patagonia
+                    argentina. Limita con Nahuel Huapi, un gran lago glacial rodeado de montañas de los Andes.</p>
+            </Section>
+        </div>
     </main>
 
     <footer class="footer">

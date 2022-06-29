@@ -5,7 +5,31 @@ body {
 
     header {
         nav {
+            height: 135px;
             @extend %estiloNav;
+
+            div {
+                a {
+                    img {
+                        border-radius: 100%;
+                    }
+                }
+
+                div {
+                    ul {
+                        .nav-item {
+                            font-size: 20px;
+                            padding-right: 35px;
+
+                            a {
+                                &:hover {
+                                    border-bottom: 1px black solid;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
 
             div {
                 .navbar-collapse {
@@ -15,23 +39,27 @@ body {
         }
     }
 
-    a {
-        .indexbtn {
-            width: 700px;
-            height: 100px;
-            border: 1px solid black;
-            animation-name: animacionbtn;
-            animation-duration: 5s;
-            animation-iteration-count: infinite;
-            background-color: rgba(255, 255, 255, 0.205);
-            &:hover{
-                @include btn-color(rgba(0, 0, 0, 0.315), white)
+    main {
+        min-height: calc(100vh - 130px - 30px);
+        a {
+            .indexbtn {
+                width: 700px;
+                height: 100px;
+                border: 1px solid black;
+                animation-name: animacionbtn;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                background-color: rgba(255, 255, 255, 0.205);
+
+                &:hover {
+                    @include btn-color(rgba(0, 0, 0, 0.315), white)
+                }
             }
         }
     }
 
     footer {
-        position: fixed;
+        margin-top: auto;
         bottom: 0;
         width: 100%;
 
