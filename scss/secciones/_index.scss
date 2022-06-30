@@ -1,5 +1,6 @@
 body {
     text-align: center;
+
     .video {
         @extend %estiloVideo;
     }
@@ -20,7 +21,7 @@ body {
                     ul {
                         .nav-item {
                             font-size: 20px;
-                            padding-right: 35px;
+                            padding: 0 30px;
 
                             a {
                                 &:hover {
@@ -143,10 +144,115 @@ body {
 
 
 /* media queries */
-@media (max-width: 700px) {
-    .indexbtn {
-        width: 380px;
+@media (max-width: 1445px) {
+    body {
+        main {
+            .slogan {
+                font-size: 40px;
+
+                &::after,
+                &::before {
+                    width: 80px;
+                    height: 2px;
+                    top: 25px;
+                }
+
+                &::before {
+                    left: -90px;
+                }
+
+                &::after {
+                    right: -90px;
+                }
+            }
+        }
     }
+}
+
+@media (max-width: 990px) {
+    body {
+        header{
+            nav{
+                div{
+                    a{
+                        .logo{
+                            width: 118px;
+                            height: 118px;
+                        }
+                    }
+                    .navbar-nav{
+                        align-items: flex-end;
+                        .nav-item{
+                            width: 140px;
+                            background-color: rgba(255, 255, 255, 0.897);
+                            z-index: 1;
+                        }
+                    }
+                }
+
+            }
+        }
+        main {
+            .slogan {
+                font-size: 32px;
+
+                &::after,
+                &::before {
+                    width: 60px;
+                    height: 2px;
+                    top: 25px;
+                }
+
+                &::before {
+                    left: -70px;
+                }
+
+                &::after {
+                    right: -70px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        main {
+            .slogan {
+                font-size: 40px;
+
+                &::after,
+                &::before {
+                    width: 0;
+                    height: 0;
+                }
+
+                &::before {
+                    left: 0;
+                }
+
+                &::after {
+                    right: 0;
+                }
+            }
+
+            a {
+                .indexbtn {
+                    width: 380px;
+                    font-size: 30px;
+                }
+            }
+            div{
+                .col-12{
+                    background-color: rgba(0, 0, 0, 0.486);
+                    border-radius: 20px;
+                    margin-top: 10px;
+                }
+            }
+        }
+       
+    }
+
 
     @keyframes animacionbtn {
         0% {

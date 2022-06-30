@@ -1,0 +1,13 @@
+CAMBIOS HECHOS PARA EL SEO:
+
+- Agregado -
+
+1- SITEMAP.
+2- keywords.
+3- description.
+4- icon.
+5- h1 personalizado en todas las secciones.
+6- Cargue el video de fondo en cloudinari para que sea mas liviana la pagina.
+7- Acomode etiquetas.
+8- titulos faciles de leer.
+9- Acomode las secciones, variables y pages en carpetas.
