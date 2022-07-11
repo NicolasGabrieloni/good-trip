@@ -12,19 +12,19 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="../logo.jpg">
     <script src="https://kit.fontawesome.com/56807291a0.js" crossorigin="anonymous"></script>
-    <title>GoodTrip | Viajes</title>
+    <title>GoodTrip | Contacto</title>
 </head>
 
 <body>
     <!-- Video Fondo -->
     <div class="video">
         <video autoplay muted loop>
-            <source src="https://res.cloudinary.com/goodtrip07/video/upload/v1656507720/videofondo_b66bdu.mp4">
+            <source src="https://res.cloudinary.com/goodtrip07/video/upload/v1657567805/pexels-pavel-danilyuk-9121382_rehkok.mp4">
         </video>
     </div>
 
     <!-- Encabezado -->
-    <header>
+    <header class="headerI">
         <nav class="navbar navbar-expand-lg fw-bold">
             <div class="container-fluid">
                 <a class="navbar-brand" href="../index.html"><img class="logo" src="../logo.jpg" width="130px" height="130px"></a>
@@ -42,7 +42,7 @@
                             <a class="nav-link" href="nosotros.html">Nosotros</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="viajes.html">Viajes</a>
+                            <a class="nav-link" href="contacto.html">Contacto</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
@@ -63,52 +63,38 @@
 
     <!-- Contenido -->
     <main>
-        <h1 class="slogan2"><b>Viajes destacados:</b></h1>
+        <h1 class="slogan2"><b>Ingreso</b></h1>
 
-        <div class="container-fluid viajes">
-            <div class="row">
+        <div class="contacto">
+            <form method="post" class="formulario">
+                <p><b>Registro</b></p>
+                <input type="text" placeholder="Nombre y apellido">
+                <br>
+                <br>
+                <input type="email" placeholder="Email">
+                <br>
+                <br>
+                <input type="password" placeholder="Contraseña">
+                <br>
+                <br>
+                <select name="Sexo">
+                    <option value="H">Hombre</option>
+                    <option value="M">Mujer</option>
+                    <option value="X">Otro</option>
+                </select>
+                <br>
+                <p><b>Consulte por los servicios</b></p>
+                <textarea name="textarea" placeholder="Escriba su consulta"></textarea>
+                <br>
+                <input type="submit" value="Enviar datos">
+                <input type="reset" value="Limpiar datos">
+            </form>
+        </div>
 
-                <div class="col p-5 fw-bold">
-                    <div class="card text-center">
-                        <img src="https://images.pexels.com/photos/8289302/pexels-photo-8289302.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Bariloche</h5>
-                            <p class="card-text">Conoce las maravillosas vistas, montañas y lagos de nuestra tan
-                                preciada patagonia.</p>
-                            <a href="bariloche.html" class="btn btn-primary">Mas informacion</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col p-5 fw-bold">
-                    <div class="card text-center">
-                        <img src="https://images.pexels.com/photos/5332934/pexels-photo-5332934.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Mendoza</h5>
-                            <p class="card-text">Visita los bellisimos lugares de Mendoza, sus tan preciados viñedos y bodegas.</p>
-                            <a href="mendoza.html" class="btn btn-primary">Mas informacion</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col p-5 fw-bold">
-                    <div class="card text-center">
-                        <img src="https://images.pexels.com/photos/6580703/pexels-photo-6580703.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Brasil</h5>
-                            <p class="card-text">Llevate la experiencia de conocer nuestro pais hermano, y sus hermosos lugares.</p>
-                            <a href="brasil.html" class="btn btn-primary">Mas informacion</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
     </main>
 
     <!-- Pie de pagina -->
-    <footer class="footer">
+    <footer class="footerI">
         <div class="redesSociales">
             <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
             <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>

@@ -1,21 +1,116 @@
 body {
+
+    .headerN {
+        nav {
+            height: 135px;
+            box-shadow: 2px 1px 10px 4px black;
+            background-color: rgba(255, 255, 255, 0.185);
+            justify-content: flex-end;
+            padding: 0;
+
+            div {
+                a {
+                    img {
+                        border-radius: 100%;
+                    }
+                }
+
+                div {
+                    ul {
+                        .nav-item {
+                            font-size: 20px;
+                            padding: 0 30px;
+
+                            a {
+                                &:hover {
+                                    border-bottom: 1px black solid;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            div {
+                .navbar-collapse {
+                    justify-content: flex-end;
+                }
+            }
+        }
+    }
+
     main {
-        .slogan2{
+        .slogan2 {
             font-size: 60px;
-            @include btn-color(rgba(255, 255, 255, 0.377), black);
+            border: 1px solid black;
+            color: rgb(243, 243, 243);
+            background-color: rgba(0, 0, 0, 0.11);
+            text-shadow: 4px 4px 5px black;
             margin-top: 40px;
             text-align: center;
             font-family: 'Parisienne', cursive;
+            margin-bottom: 0;
+            padding-bottom: 0;
         }
-        div {
-            .col-12 {
-                color: whitesmoke;
-                &:hover {
-                    @include btn-color(rgba(255, 255, 255, 0.562), black);
-                    transition: .3s;
-                    border-radius: 20px;
-                    box-shadow: 1px 4px 10px 4px black;
+
+        .container {
+            max-width: 100%;
+
+            div {
+                .acordion {
+                    padding-top: 100px;
+                    padding-right: 40px;
+                    width: 60%;
+
+                    div {
+                        div {
+                            div {
+                                transition: .6s;
+                            }
+                        }
+                    }
                 }
+            }
+        }
+
+        .carrusel {
+            div {
+                div {
+                    .carousel-inner {
+                        box-shadow: 0px 0px 20px 10px black;
+                        width: 60%;
+                        .carousel-item{
+                            transition: 1s;
+                        }
+                    }
+
+                    .corousel-indicators {
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.footerN {
+    margin-top: auto;
+    bottom: 0;
+    width: 100%;
+
+    .redesSociales {
+        text-align: center;
+        margin: 20px;
+
+        a {
+            margin: 35px;
+            font-size: 40px;
+            color: $colorfooter;
+
+            &:hover {
+                border-bottom: 2px solid black;
+                @include btn-color(none, black);
             }
         }
     }

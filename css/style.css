@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0; }
 
-body header nav {
+body .headerI nav {
   box-shadow: 2px 1px 10px 4px black;
   background-color: rgba(255, 255, 255, 0.486);
   justify-content: flex-end;
@@ -16,20 +16,21 @@ body .video {
   z-index: -1;
   top: 50%;
   left: 50%;
-  transform: translateX(-50%) translateY(-50%); }
+  transform: translateX(-50%) translateY(-50%);
+  background-size: cover; }
 
 body {
   text-align: center; }
-  body header nav {
+  body .headerI nav {
     height: 135px; }
-    body header nav div a img {
+    body .headerI nav div a img {
       border-radius: 100%; }
-    body header nav div div ul .nav-item {
+    body .headerI nav div div ul .nav-item {
       font-size: 20px;
       padding: 0 30px; }
-      body header nav div div ul .nav-item a:hover {
+      body .headerI nav div div ul .nav-item a:hover {
         border-bottom: 1px black solid; }
-    body header nav div .navbar-collapse {
+    body .headerI nav div .navbar-collapse {
       justify-content: flex-end; }
   body main {
     min-height: calc(100vh - 130px - 30px); }
@@ -65,18 +66,18 @@ body {
       body main a .indexbtn:hover {
         background-color: rgba(0, 0, 0, 0.315);
         color: white; }
-  body footer {
+  body .footerI {
     margin-top: auto;
     bottom: 0;
     width: 100%; }
-    body footer .redesSociales {
+    body .footerI .redesSociales {
       text-align: center;
       margin: 20px; }
-      body footer .redesSociales a {
+      body .footerI .redesSociales a {
         margin: 35px;
         font-size: 40px;
         color: white; }
-        body footer .redesSociales a:hover {
+        body .footerI .redesSociales a:hover {
           border-bottom: 2px solid black;
           background-color: none;
           color: black; }
@@ -166,54 +167,109 @@ body {
       width: 360px;
       height: 100px; } } }
 
+body .headerN nav {
+  height: 135px;
+  box-shadow: 2px 1px 10px 4px black;
+  background-color: rgba(255, 255, 255, 0.185);
+  justify-content: flex-end;
+  padding: 0; }
+  body .headerN nav div a img {
+    border-radius: 100%; }
+  body .headerN nav div div ul .nav-item {
+    font-size: 20px;
+    padding: 0 30px; }
+    body .headerN nav div div ul .nav-item a:hover {
+      border-bottom: 1px black solid; }
+  body .headerN nav div .navbar-collapse {
+    justify-content: flex-end; }
+
 body main .slogan2 {
   font-size: 60px;
-  background-color: rgba(255, 255, 255, 0.377);
-  color: black;
+  border: 1px solid black;
+  color: #f3f3f3;
+  background-color: rgba(0, 0, 0, 0.11);
+  text-shadow: 4px 4px 5px black;
   margin-top: 40px;
   text-align: center;
-  font-family: 'Parisienne', cursive; }
+  font-family: 'Parisienne', cursive;
+  margin-bottom: 0;
+  padding-bottom: 0; }
 
-body main div .col-12 {
-  color: whitesmoke; }
-  body main div .col-12:hover {
-    background-color: rgba(255, 255, 255, 0.562);
-    color: black;
-    transition: .3s;
-    border-radius: 20px;
-    box-shadow: 1px 4px 10px 4px black; }
+body main .container {
+  max-width: 100%; }
+  body main .container div .acordion {
+    padding-top: 100px;
+    padding-right: 40px;
+    width: 60%; }
+    body main .container div .acordion div div div {
+      transition: .6s; }
 
-body main div div div .card {
+body main .carrusel div div .carousel-inner {
+  box-shadow: 0px 0px 20px 10px black;
+  width: 60%; }
+  body main .carrusel div div .carousel-inner .carousel-item {
+    transition: 1s; }
+
+body main .carrusel div div .corousel-indicators {
+  flex-direction: column; }
+
+.footerN {
+  margin-top: auto;
+  bottom: 0;
+  width: 100%; }
+  .footerN .redesSociales {
+    text-align: center;
+    margin: 20px; }
+    .footerN .redesSociales a {
+      margin: 35px;
+      font-size: 40px;
+      color: white; }
+      .footerN .redesSociales a:hover {
+        border-bottom: 2px solid black;
+        background-color: none;
+        color: black; }
+
+body main .contacto {
+  box-shadow: 5px 5px 2px 3px white, 10px 10px 2px 3px wheat, 15px 15px 2px 3px white, 20px 20px 2px 3px wheat;
+  background-color: rgba(255, 255, 255, 0.438);
+  display: inline-block;
+  width: 400px;
+  height: 500px;
+  margin-top: 120px;
   color: black;
-  flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
-  width: 25rem;
-  margin-bottom: 60px; }
-  body main div div div .card:hover {
-    transform: scale(1.02);
-    box-shadow: 2px 1px 10px 4px black; }
+  font-size: 16px; }
+  body main .contacto p {
+    margin-top: 30px; }
+    body main .contacto p b {
+      font-size: 30px;
+      border-bottom: 1px solid; }
 
 @media (max-width: 500px) {
-  body main div div div .card {
-    width: 20rem; } }
+  body main .contacto {
+    font-size: 12px;
+    width: 300px;
+    height: 400px; }
+    body main .contacto p b {
+      font-size: 20px; } }
 
-body main {
-  position: relative; }
-  body main div div .carousel-inner {
-    margin-top: 100px;
-    box-shadow: 5px 6px 10px 4px black;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto; }
-  body main div .infoViajes {
-    background-color: rgba(255, 255, 255, 0.562);
-    color: black;
-    border-radius: 20px;
-    margin-top: 20px;
-    text-align: center;
-    padding-top: 5px;
-    padding-bottom: 5px; }
+body {
+  min-width: 100%; }
+  body main {
+    position: relative; }
+    body main .infoBrc {
+      color: white;
+      padding: 30px 200px;
+      text-shadow: 2px 4px 4px black; }
+    body main .cards {
+      width: 100%;
+      margin-top: 100px; }
+      body main .cards .card {
+        background-color: rgba(0, 0, 0, 0.514);
+        color: white; }
+        body main .cards .card .card-body .card-title {
+          font-size: 30px;
+          background-color: black;
+          height: 40px; }
 
 @media (max-width: 990px) {
   main {
