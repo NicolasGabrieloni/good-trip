@@ -20,7 +20,8 @@ body .video {
   background-size: cover; }
 
 body {
-  text-align: center; }
+  text-align: center;
+  box-sizing: border-box; }
   body .headerI nav {
     height: 135px; }
     body .headerI nav div a img {
@@ -32,40 +33,58 @@ body {
         border-bottom: 1px black solid; }
     body .headerI nav div .navbar-collapse {
       justify-content: flex-end; }
-  body main {
-    min-height: calc(100vh - 130px - 30px); }
-    body main .slogan {
-      display: inline-block;
-      position: relative;
-      font-family: 'Parisienne', cursive;
-      font-size: 60px;
+  body .mainI {
+    min-height: calc(100vh - 130px - 220px); }
+    body .mainI .contenedorSlogan {
+      margin: auto;
       margin-top: 100px;
-      color: white;
-      text-shadow: 4px 8px 3px black; }
-      body main .slogan::after, body main .slogan::before {
-        content: "";
-        position: absolute;
-        width: 120px;
-        height: 5px;
-        background-color: currentColor;
-        top: 36px; }
-      body main .slogan::before {
-        left: -140px; }
-      body main .slogan::after {
-        right: -140px; }
-    body main a .indexbtn {
-      width: 700px;
-      height: 100px;
-      border: 1px solid black;
-      animation-name: animacionbtn;
-      animation-duration: 5s;
-      animation-iteration-count: infinite;
-      background-color: rgba(255, 255, 255, 0.205);
-      font-family: 'Parisienne', cursive;
-      font-size: 50px; }
-      body main a .indexbtn:hover {
-        background-color: rgba(0, 0, 0, 0.315);
-        color: white; }
+      width: 100%; }
+      body .mainI .contenedorSlogan .slogan {
+        color: whitesmoke;
+        background-color: rgba(255, 255, 255, 0.048);
+        position: relative;
+        margin: 0 auto;
+        width: 60%;
+        height: 70%; }
+        body .mainI .contenedorSlogan .slogan .textSlogan {
+          position: absolute;
+          top: 15px;
+          left: 15px;
+          right: 15px;
+          bottom: 15px;
+          padding: 30px; }
+          body .mainI .contenedorSlogan .slogan .textSlogan h1 {
+            font-size: 40px;
+            margin: auto;
+            font-family: 'Parisienne', cursive;
+            text-shadow: 2px 2px 3px black; }
+      body .mainI .contenedorSlogan svg,
+      body .mainI .contenedorSlogan rect {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        fill: transparent; }
+      body .mainI .contenedorSlogan rect {
+        stroke: white;
+        stroke-width: 4;
+        stroke-dasharray: 200;
+        animation: animacionbtn 5s linear infinite; }
+    body .mainI .boxBtn {
+      display: inline-block;
+      margin-top: 180px;
+      background-color: rgba(255, 255, 255, 0.048);
+      border: 1px solid white;
+      width: 270px;
+      height: 56px; }
+      body .mainI .boxBtn:hover {
+        transform: scale(1.05); }
+      body .mainI .boxBtn .btnI {
+        text-decoration: none;
+        color: white;
+        font-family: 'Parisienne', cursive;
+        font-size: 35px;
+        text-shadow: 2px 2px 3px black; }
   body .footerI {
     margin-top: auto;
     bottom: 0;
@@ -84,34 +103,11 @@ body {
 
 @keyframes animacionbtn {
   0% {
-    width: 700px;
-    height: 100px; }
-  25% {
-    width: 550px;
-    height: 150px; }
-  50% {
-    width: 400px;
-    height: 200px; }
-  75% {
-    width: 550px;
-    height: 150px; }
+    stroke-dashoffset: 400; }
   100% {
-    width: 700px;
-    height: 100px; } }
+    stroke-dashoffset: 0; } }
 
 /* media queries */
-@media (max-width: 1445px) {
-  body main .slogan {
-    font-size: 40px; }
-    body main .slogan::after, body main .slogan::before {
-      width: 80px;
-      height: 2px;
-      top: 25px; }
-    body main .slogan::before {
-      left: -90px; }
-    body main .slogan::after {
-      right: -90px; } }
-
 @media (max-width: 990px) {
   body header nav div a .logo {
     width: 118px;
@@ -122,50 +118,22 @@ body {
       width: 140px;
       background-color: rgba(255, 255, 255, 0.897);
       z-index: 1; }
-  body main .slogan {
-    font-size: 32px; }
-    body main .slogan::after, body main .slogan::before {
-      width: 60px;
-      height: 2px;
-      top: 25px; }
-    body main .slogan::before {
-      left: -70px; }
-    body main .slogan::after {
-      right: -70px; } }
+  body main .contenedorSlogan .textSlogan {
+    margin-top: -18px; }
+    body main .contenedorSlogan .textSlogan h1 b {
+      font-size: 30px; } }
 
-@media (max-width: 768px) {
-  body main .slogan {
-    font-size: 40px; }
-    body main .slogan::after, body main .slogan::before {
-      width: 0;
-      height: 0; }
-    body main .slogan::before {
-      left: 0; }
-    body main .slogan::after {
-      right: 0; }
-  body main a .indexbtn {
-    width: 380px;
-    font-size: 30px; }
-  body main div .col-12 {
-    background-color: rgba(0, 0, 0, 0.486);
-    border-radius: 20px;
-    margin-top: 10px; }
-  @keyframes animacionbtn {
-    0% {
-      width: 360px;
-      height: 100px; }
-    25% {
-      width: 350px;
-      height: 125px; }
-    50% {
-      width: 300px;
-      height: 150px; }
-    75% {
-      width: 350px;
-      height: 125px; }
-    100% {
-      width: 360px;
-      height: 100px; } } }
+@media (max-width: 635px) {
+  body main .contenedorSlogan .textSlogan {
+    margin-bottom: 20px; }
+    body main .contenedorSlogan .textSlogan h1 b {
+      font-size: 16px; } }
+
+@media (max-width: 405px) {
+  body main .contenedorSlogan .textSlogan {
+    margin-top: -50px; }
+    body main .contenedorSlogan .textSlogan h1 b {
+      font-size: 15px; } }
 
 body .headerN nav {
   height: 135px;
@@ -182,6 +150,10 @@ body .headerN nav {
       border-bottom: 1px black solid; }
   body .headerN nav div .navbar-collapse {
     justify-content: flex-end; }
+
+body main .boxS {
+  margin: 0 auto;
+  width: 76%; }
 
 body main .slogan2 {
   font-size: 60px;
@@ -200,13 +172,13 @@ body main .container {
   body main .container div .acordion {
     padding-top: 100px;
     padding-right: 40px;
-    width: 60%; }
+    width: 70%; }
     body main .container div .acordion div div div {
       transition: .6s; }
 
 body main .carrusel div div .carousel-inner {
   box-shadow: 0px 0px 20px 10px black;
-  width: 60%; }
+  width: 56%; }
   body main .carrusel div div .carousel-inner .carousel-item {
     transition: 1s; }
 
@@ -229,15 +201,28 @@ body main .carrusel div div .corousel-indicators {
         background-color: none;
         color: black; }
 
+@media (max-width: 990px) {
+  body main .slogan2 {
+    font-size: 46px; } }
+
+@media (max-width: 768px) {
+  body main .slogan2 {
+    font-size: 35px; } }
+
+@media (max-width: 508px) {
+  body main .slogan2 {
+    font-size: 25px; } }
+
 body main .contacto {
   box-shadow: 5px 5px 2px 3px white, 10px 10px 2px 3px wheat, 15px 15px 2px 3px white, 20px 20px 2px 3px wheat;
   background-color: rgba(255, 255, 255, 0.438);
   display: inline-block;
   width: 400px;
   height: 500px;
-  margin-top: 120px;
+  margin-top: 100px;
   color: black;
-  font-size: 16px; }
+  font-size: 16px;
+  margin-bottom: 60px; }
   body main .contacto p {
     margin-top: 30px; }
     body main .contacto p b {
@@ -258,7 +243,7 @@ body {
     position: relative; }
     body main .infoBrc {
       color: white;
-      padding: 30px 200px;
+      padding: 30px 100px;
       text-shadow: 2px 4px 4px black; }
     body main .cards {
       width: 100%;
@@ -273,4 +258,16 @@ body {
 
 @media (max-width: 990px) {
   main {
-    margin-top: 100px; } }
+    margin-top: 100px; }
+    main .cards {
+      margin: 0 auto; } }
+
+@media (max-width: 768px) {
+  body main .infoBrc {
+    font-size: 20px; } }
+
+@media (max-width: 500px) {
+  body main .infoBrc {
+    font-size: 16px; }
+  body main .cards {
+    width: 80%; } }

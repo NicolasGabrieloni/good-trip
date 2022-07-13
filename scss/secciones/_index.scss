@@ -1,5 +1,6 @@
 body {
     text-align: center;
+    box-sizing: border-box;
 
     .video {
         @extend %estiloVideo;
@@ -41,52 +42,74 @@ body {
         }
     }
 
-    main {
-        min-height: calc(100vh - 130px - 30px);
+    .mainI {
+        min-height: calc(100vh - 130px - 220px);
 
-        .slogan {
-            display: inline-block;
-            position: relative;
-            font-family: 'Parisienne', cursive;
-            font-size: 60px;
+        .contenedorSlogan {
+            margin: auto;
             margin-top: 100px;
-            color: white;
-            text-shadow: 4px 8px 3px black;
+            width: 100%;
 
-            &::after,
-            &::before {
-                content: "";
-                position: absolute;
-                width: 120px;
-                height: 5px;
-                background-color: currentColor;
-                top: 36px;
+            .slogan {
+                color: whitesmoke;
+                background-color: rgba(255, 255, 255, 0.048);
+                position: relative;
+                margin: 0 auto;
+                width: 60%;
+                height: 70%;
+
+                .textSlogan {
+                    position: absolute;
+                    top: 15px;
+                    left: 15px;
+                    right: 15px;
+                    bottom: 15px;
+                    padding: 30px;
+
+                    h1 {
+                        font-size: 40px;
+                        margin: auto;
+                        font-family: 'Parisienne', cursive;
+                        text-shadow: 2px 2px 3px black;
+                    }
+                }
             }
 
-            &::before {
-                left: -140px;
+            svg,
+            rect {
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                fill: transparent;
             }
 
-            &::after {
-                right: -140px;
+            rect {
+                stroke: white;
+                stroke-width: 4;
+                stroke-dasharray: 200;
+                animation: animacionbtn 5s linear infinite;
             }
         }
 
-        a {
-            .indexbtn {
-                width: 700px;
-                height: 100px;
-                border: 1px solid black;
-                animation-name: animacionbtn;
-                animation-duration: 5s;
-                animation-iteration-count: infinite;
-                background-color: rgba(255, 255, 255, 0.205);
-                font-family: 'Parisienne', cursive;
-                font-size: 50px;
+        .boxBtn {
+            display: inline-block;
+            margin-top: 180px;
+            background-color: rgba(255, 255, 255, 0.048);
+            border: 1px solid white;
+            width: 270px;
+            height: 56px;
 
-                &:hover {
-                    @include btn-color(rgba(0, 0, 0, 0.315), white)
-                }
+            &:hover {
+                transform: scale(1.05);
+            }
+
+            .btnI {
+                text-decoration: none;
+                color: white;
+                font-family: 'Parisienne', cursive;
+                font-size: 35px;
+                text-shadow: 2px 2px 3px black;
             }
         }
     }
@@ -117,72 +140,32 @@ body {
 
 @keyframes animacionbtn {
     0% {
-        width: 700px;
-        height: 100px;
-    }
-
-    25% {
-        width: 550px;
-        height: 150px;
-    }
-
-    50% {
-        width: 400px;
-        height: 200px;
-    }
-
-    75% {
-        width: 550px;
-        height: 150px;
+        stroke-dashoffset: 400;
     }
 
     100% {
-        width: 700px;
-        height: 100px;
+        stroke-dashoffset: 0;
     }
 }
 
 
 /* media queries */
-@media (max-width: 1445px) {
-    body {
-        main {
-            .slogan {
-                font-size: 40px;
-
-                &::after,
-                &::before {
-                    width: 80px;
-                    height: 2px;
-                    top: 25px;
-                }
-
-                &::before {
-                    left: -90px;
-                }
-
-                &::after {
-                    right: -90px;
-                }
-            }
-        }
-    }
-}
-
 @media (max-width: 990px) {
     body {
-        header{
-            nav{
-                div{
-                    a{
-                        .logo{
+        header {
+            nav {
+                div {
+                    a {
+                        .logo {
                             width: 118px;
                             height: 118px;
                         }
                     }
-                    .navbar-nav{
+
+                    .navbar-nav {
                         align-items: flex-end;
-                        .nav-item{
+
+                        .nav-item {
                             width: 140px;
                             background-color: rgba(255, 255, 255, 0.897);
                             z-index: 1;
@@ -192,92 +175,52 @@ body {
 
             }
         }
+
         main {
-            .slogan {
-                font-size: 32px;
-
-                &::after,
-                &::before {
-                    width: 60px;
-                    height: 2px;
-                    top: 25px;
+            .contenedorSlogan {
+                .textSlogan {
+                    margin-top: -18px;
+                    h1 {
+                        b {
+                            font-size: 30px;
+                        }
+                    }
                 }
+            }
 
-                &::before {
-                    left: -70px;
-                }
+        }
+    }
+}
 
-                &::after {
-                    right: -70px;
+@media (max-width: 635px) {
+    body {
+        main {
+            .contenedorSlogan {
+                .textSlogan {
+                    margin-bottom: 20px;
+                    h1 {
+                        b {
+                            font-size: 16px;
+                        }
+                    }
                 }
             }
         }
     }
 }
-
-@media (max-width: 768px) {
+@media (max-width: 405px) {
     body {
         main {
-            .slogan {
-                font-size: 40px;
-
-                &::after,
-                &::before {
-                    width: 0;
-                    height: 0;
-                }
-
-                &::before {
-                    left: 0;
-                }
-
-                &::after {
-                    right: 0;
+            .contenedorSlogan {
+                .textSlogan {
+                    margin-top: -50px;
+                    h1 {
+                        b {
+                            font-size: 15px;
+                        }
+                    }
                 }
             }
-
-            a {
-                .indexbtn {
-                    width: 380px;
-                    font-size: 30px;
-                }
-            }
-            div{
-                .col-12{
-                    background-color: rgba(0, 0, 0, 0.486);
-                    border-radius: 20px;
-                    margin-top: 10px;
-                }
-            }
-        }
-       
-    }
-
-
-    @keyframes animacionbtn {
-        0% {
-            width: 360px;
-            height: 100px;
-        }
-
-        25% {
-            width: 350px;
-            height: 125px;
-        }
-
-        50% {
-            width: 300px;
-            height: 150px;
-        }
-
-        75% {
-            width: 350px;
-            height: 125px;
-        }
-
-        100% {
-            width: 360px;
-            height: 100px;
         }
     }
 }
